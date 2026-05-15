@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
-    <footer className="bg-[#3E2723] text-[#FAF3E0] mt-10 pt-8 pb-3.5 px-6">
+    <footer className="bg-[#3E2723] text-[#FAF3E0] mt-10 pt-8 pb-3.5 px-6 dark:bg-[#1a1a1a]">
       <div className="flex flex-wrap justify-between gap-7 max-w-[1180px] mx-auto">
 
         <div className="flex flex-col flex-1 min-w-[200px]">
@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
 
       </div>
-      <p className="text-center mt-5 pt-3.5 border-t border-[#5D4037] text-[#D7B98E] text-[13px]">
+      <p className="text-center mt-5 pt-3.5 border-t border-[#5D4037] text-[#D7B98E] text-[13px] dark:border-[#4a4a4a]">
         © 2026 SweetBite Shop. All rights reserved.
       </p>
     </footer>

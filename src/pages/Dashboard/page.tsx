@@ -19,9 +19,9 @@ export default function Dashboard() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col min-h-[calc(100vh-70px)] px-8 py-7 max-w-[1280px] mx-auto w-full">
+      <div className="flex flex-col min-h-[calc(100vh-70px)] px-8 py-7 max-w-[1280px] mx-auto w-full dark:bg-[#1a1a1a]">
 
-        <section className="flex flex-col items-center text-center px-5 py-16 bg-gradient-to-br from-[#3E2723] to-[#5D4037] rounded-[10px] mb-8">
+        <section className="flex flex-col items-center text-center px-5 py-16 bg-gradient-to-br from-[#3E2723] to-[#5D4037] rounded-[10px] mb-8 dark:from-[#2a1810] dark:to-[#3d2b1f]">
           <h1 className="text-[42px] font-bold text-[#D4AF37] mb-3">Owner Dashboard</h1>
           <p className="text-[#D4AF37] text-[15px]">A quick look at today's bakery performance.</p>
         </section>
@@ -29,16 +29,16 @@ export default function Dashboard() {
         {/* STATS */}
         <div className="flex flex-wrap justify-center gap-5 my-9 mx-3">
           {[{ label: "Today's Orders", value: '42', note: '+8 vs yesterday' }, { label: 'Revenue', value: '45000', note: '+12% weekly' }, { label: 'Cakes Baked', value: '17', note: '3 wedding tiers' }, { label: 'Reviews', value: '9', note: 'Avg 4.8 ⭐' }].map(s => (
-            <div key={s.label} className="flex flex-col w-[220px] text-center items-center min-h-[220px] justify-between bg-white border border-[#D7B98E] rounded-[10px] p-4 shadow-[0_4px_12px_rgba(62,39,35,0.08)] hover:-translate-y-1.5 hover:shadow-[0_10px_24px_rgba(62,39,35,0.18)] hover:border-[#D4AF37] transition-all duration-300">
-              <h4 className="text-[17px] font-semibold text-[#5D4037] mb-2">{s.label}</h4>
+            <div key={s.label} className="flex flex-col w-[220px] text-center items-center min-h-[220px] justify-between bg-white border border-[#D7B98E] rounded-[10px] p-4 shadow-[0_4px_12px_rgba(62,39,35,0.08)] hover:-translate-y-1.5 hover:shadow-[0_10px_24px_rgba(62,39,35,0.18)] hover:border-[#D4AF37] transition-all duration-300 dark:bg-[#2a2a2a] dark:border-[#4a4a4a] dark:shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
+              <h4 className="text-[17px] font-semibold text-[#5D4037] mb-2 dark:text-[#D4AF37]">{s.label}</h4>
               <h2 className="text-[30px] font-bold text-[#D4AF37] mb-2">{s.value}</h2>
-              <p className="text-[#8D6E63] text-[15px]">{s.note}</p>
+              <p className="text-[#8D6E63] text-[15px] dark:text-[#D7B98E]">{s.note}</p>
             </div>
           ))}
         </div>
 
         {/* STOCK MANAGEMENT */}
-        <h2 className="text-[30px] font-bold text-[#5D4037] mt-8 mb-3">Stock Management</h2>
+        <h2 className="text-[30px] font-bold text-[#5D4037] mt-8 mb-3 dark:text-[#D4AF37]">Stock Management</h2>
         <div className="flex flex-wrap justify-center gap-5 my-9 mx-3">
           {[{ title: 'View All Stock', desc: 'See all bakery products and inventory.', btn: 'View Stock', del: false }, { title: 'Insert New Stock', desc: 'Add cakes, pastries and desserts.', btn: 'Add Stock', del: false }, { title: 'Update Stock', desc: 'Edit product quantity and prices.', btn: 'Update Stock', del: false }, { title: 'Delete Stock', desc: 'Remove unavailable bakery items.', btn: 'Delete', del: true }].map(s => (
             <div key={s.title} className="flex flex-col w-[220px] text-center items-center min-h-[220px] justify-between bg-white border border-[#D7B98E] rounded-[10px] p-4 shadow-[0_4px_12px_rgba(62,39,35,0.08)] hover:-translate-y-1.5 hover:shadow-[0_10px_24px_rgba(62,39,35,0.18)] hover:border-[#D4AF37] transition-all duration-300">

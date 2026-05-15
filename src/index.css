@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  @apply bg-[#FAF3E0] text-[#3E2723];
+  @apply bg-[#FAF3E0] text-[#3E2723] transition-colors duration-300;
+}
+
+:root.dark {
+  @apply bg-[#1a1a1a] text-[#FAF3E0];
 }
 
 body {
