@@ -1,9 +1,10 @@
 import Navbar from '../../components/Navbar/page'
 import Footer from '../../components/Footer/page'
+import { imagePath } from '../../assets/imagePath'
 
-const cakes     = [{ img: '/images/triple.jpg', label: 'Triple Chocolate' }, { img: '/images/redd.jpg', label: 'Red Velvet' }, { img: '/images/van.jpg', label: 'Vanilla Bean' }, { img: '/images/wed.jpg', label: 'Wedding Tier' }]
-const iceCreams = [{ img: '/images/salt.jpg', label: 'Salted Caramel' }, { img: '/images/picto.jpg', label: 'Pistachio Royale' }, { img: '/images/staaa.jpg', label: 'Strawberry Cheesecake' }, { img: '/images/mint.webp', label: 'Mint Choc Chip' }]
-const desserts  = [{ img: '/images/tir.jpg', label: 'Tiramisu' }, { img: '/images/french.jpg', label: 'French Macarons' }, { img: '/images/chee.jpg', label: 'NY Cheesecake' }, { img: '/images/fudge.webp', label: 'Fudge Brownie' }]
+const cakes     = [{ img: imagePath('triple.jpg'), label: 'Triple Chocolate' }, { img: imagePath('redd.jpg'), label: 'Red Velvet' }, { img: imagePath('van.jpg'), label: 'Vanilla Bean' }, { img: imagePath('wed.jpg'), label: 'Wedding Tier' }]
+const iceCreams = [{ img: imagePath('salt.jpg'), label: 'Salted Caramel' }, { img: imagePath('picto.jpg'), label: 'Pistachio Royale' }, { img: imagePath('staaa.jpg'), label: 'Strawberry Cheesecake' }, { img: imagePath('mint.webp'), label: 'Mint Choc Chip' }]
+const desserts  = [{ img: imagePath('tir.jpg'), label: 'Tiramisu' }, { img: imagePath('french.jpg'), label: 'French Macarons' }, { img: imagePath('chee.jpg'), label: 'NY Cheesecake' }, { img: imagePath('fudge.webp'), label: 'Fudge Brownie' }]
 
 function GalleryCard({ img, label }: { img: string; label: string }) {
   return (

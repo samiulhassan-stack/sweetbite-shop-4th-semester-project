@@ -1,5 +1,6 @@
 import Navbar from '../../components/Navbar/page'
 import Footer from '../../components/Footer/page'
+import { imagePath } from '../../assets/imagePath'
 
 export default function Teams() {
   const teamMembers = [
@@ -8,7 +9,7 @@ export default function Teams() {
       role: 'Head Pastry Chef',
       experience: '15 years',
       specialty: 'French Pastries & Wedding Cakes',
-      image: '/images/chee.jpg',
+      image: imagePath('chee.jpg'),
       bio: 'Maria brings European elegance to every creation with her training from Le Cordon Bleu Paris.'
     },
     {
@@ -16,7 +17,7 @@ export default function Teams() {
       role: 'Ice Cream Specialist',
       experience: '8 years',
       specialty: 'Artisan Ice Creams & Gelatos',
-      image: '/images/mint.webp',
+      image: imagePath('mint.webp'),
       bio: 'Ahmed crafts our signature ice creams using traditional techniques and premium ingredients.'
     },
     {
@@ -24,7 +25,7 @@ export default function Teams() {
       role: 'Cake Designer',
       experience: '12 years',
       specialty: 'Custom Cake Design & Decoration',
-      image: '/images/van.jpg',
+      image: imagePath('van.jpg'),
       bio: 'Sarah transforms celebrations into edible art with her innovative cake designs.'
     },
     {
@@ -32,7 +33,7 @@ export default function Teams() {
       role: 'Chocolatier',
       experience: '10 years',
       specialty: 'Handcrafted Chocolates & Truffles',
-      image: '/images/fudge.webp',
+      image: imagePath('fudge.webp'),
       bio: 'Omar creates exquisite chocolates that melt hearts and satisfy the most discerning palates.'
     },
     {
@@ -40,7 +41,7 @@ export default function Teams() {
       role: 'Bakery Manager',
       experience: '7 years',
       specialty: 'Operations & Quality Control',
-      image: '/images/picto.jpg',
+      image: imagePath('picto.jpg'),
       bio: 'Lisa ensures every product meets our high standards and operations run smoothly.'
     },
     {
@@ -48,7 +49,7 @@ export default function Teams() {
       role: 'Sous Chef',
       experience: '6 years',
       specialty: 'Bread & Savory Pastries',
-      image: '/images/redd.jpg',
+      image: imagePath('redd.jpg'),
       bio: 'David brings warmth to our bakery with fresh breads and savory delights baked daily.'
     }
   ]

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar/page'
 import Footer from '../../components/Footer/page'
+import { imagePath } from '../../assets/imagePath'
 
 export default function About() {
   const [activeTab, setActiveTab] = useState('story')
@@ -46,7 +47,7 @@ export default function About() {
     {
       name: 'Maria Rodriguez',
       role: 'Founder & Head Pastry Chef',
-      image: '/images/chee.jpg',
+      image: imagePath('chee.jpg'),
       bio: 'Maria\'s journey began in her grandmother\'s kitchen in Barcelona. After training at Le Cordon Bleu Paris and working in Michelin-starred restaurants across Europe, she brought her passion for authentic pastries to create SweetBite.',
       achievements: ['Le Cordon Bleu Graduate', 'James Beard Nominee', '15+ Years Experience'],
       quote: 'Every dessert tells a story, and I want each bite to transport you to a moment of pure joy.'
@@ -54,7 +55,7 @@ export default function About() {
     {
       name: 'David Chen',
       role: 'Co-Founder & Business Director',
-      image: '/images/redd.jpg',
+      image: imagePath('redd.jpg'),
       bio: 'David brings 20 years of business expertise and a passion for sustainable practices. His vision of combining traditional craftsmanship with modern business practices has been key to SweetBite\'s growth.',
       achievements: ['MBA Harvard Business School', 'Sustainability Advocate', 'Community Leader'],
       quote: 'Great business is about creating value for everyone - customers, employees, and the community.'
@@ -118,7 +119,7 @@ export default function About() {
                   </p>
                 </div>
                 <div className="flex-1 min-w-[300px] max-w-[400px]">
-                  <img src="/images/staaa.jpg" alt="SweetBite Story" className="w-full h-[300px] object-cover rounded-[10px] shadow-[0_4px_12px_rgba(62,39,35,0.15)]" />
+                  <img src={imagePath('staaa.jpg')} alt="SweetBite Story" className="w-full h-[300px] object-cover rounded-[10px] shadow-[0_4px_12px_rgba(62,39,35,0.15)]" />
                 </div>
               </div>
             </section>

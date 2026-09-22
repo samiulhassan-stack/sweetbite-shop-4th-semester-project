@@ -13,6 +13,7 @@ import Cart from './pages/Cart/page'
 import Teams from './pages/Teams/page'
 import About from './pages/About/page'
 import Profile from './pages/Profile/page'
+import { imagePath } from './assets/imagePath'
 
 function Home() {
   return (
@@ -48,10 +49,10 @@ function Home() {
           <p className="text-center text-[#5D4037] text-[15px] mb-2 dark:text-[#FAF3E0]">A taste of what our pastry chefs are excited about today.</p>
           <div className="flex flex-wrap justify-center gap-5 my-9 mx-3">
             {[
-              { img: '/images/triple.jpg', name: 'Triple Chocolate Cake',  desc: 'Three layers of dark, milk and white chocolate ganache.', price: '7000.00' },
-              { img: '/images/salt.jpg',   name: 'Salted Caramel Scoop',   desc: 'Slow churned caramel ice cream with sea salt flakes.',   price: '4500.50' },
-              { img: '/images/tir.jpg',    name: 'Classic Tiramisu',       desc: 'Espresso-soaked ladyfingers with mascarpone cream.',     price: '4000.00' },
-              { img: '/images/french.jpg', name: 'French Macarons',        desc: 'A box of twelve with rotating flavours.',               price: '5500.00' },
+              { img: imagePath('triple.jpg'), name: 'Triple Chocolate Cake',  desc: 'Three layers of dark, milk and white chocolate ganache.', price: '7000.00' },
+              { img: imagePath('salt.jpg'),   name: 'Salted Caramel Scoop',   desc: 'Slow churned caramel ice cream with sea salt flakes.',   price: '4500.50' },
+              { img: imagePath('tir.jpg'),    name: 'Classic Tiramisu',       desc: 'Espresso-soaked ladyfingers with mascarpone cream.',     price: '4000.00' },
+              { img: imagePath('french.jpg'), name: 'French Macarons',        desc: 'A box of twelve with rotating flavours.',               price: '5500.00' },
             ].map(item => (
               <div key={item.name} className="flex flex-col w-[280px] bg-white border border-[#D7B98E] rounded-[10px] p-4 shadow-[0_4px_12px_rgba(62,39,35,0.08)] hover:-translate-y-1.5 hover:shadow-[0_10px_24px_rgba(62,39,35,0.18)] hover:border-[#D4AF37] transition-all duration-300 dark:bg-[#2a2a2a] dark:border-[#4a4a4a] dark:shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
                 <img src={item.img} alt={item.name} className="w-full h-[180px] object-cover rounded-[6px]" />
@@ -88,7 +89,7 @@ function Home() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/"          element={<Home />} />
         <Route path="/menu"      element={<Menu />} />

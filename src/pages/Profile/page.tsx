@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar/page'
 import Footer from '../../components/Footer/page'
+import { imagePath } from '../../assets/imagePath'
 
 export default function Profile() {
   const [activeTab, setActiveTab] = useState('profile')
@@ -22,10 +23,10 @@ export default function Profile() {
   ]
 
   const favoriteItems = [
-    { name: 'Triple Chocolate Cake', price: 7000, image: '/images/triple.jpg', orders: 5 },
-    { name: 'Classic Tiramisu', price: 4000, image: '/images/tir.jpg', orders: 3 },
-    { name: 'French Macarons', price: 5500, image: '/images/french.jpg', orders: 4 },
-    { name: 'Salted Caramel Scoop', price: 4500, image: '/images/salt.jpg', orders: 2 }
+    { name: 'Triple Chocolate Cake', price: 7000, image: imagePath('triple.jpg'), orders: 5 },
+    { name: 'Classic Tiramisu', price: 4000, image: imagePath('tir.jpg'), orders: 3 },
+    { name: 'French Macarons', price: 5500, image: imagePath('french.jpg'), orders: 4 },
+    { name: 'Salted Caramel Scoop', price: 4500, image: imagePath('salt.jpg'), orders: 2 }
   ]
 
   function handleInputChange(field: string, value: string) {

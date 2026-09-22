@@ -4,33 +4,26 @@ import { Link } from 'react-router-dom'
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
-  const [theme, setTheme] = useState<'light' | 'dark'>('light')
-
-  // Initialize theme from localStorage or system preference
-  useEffect(() => {
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null
-    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-    const initialTheme = savedTheme || systemTheme
-    
-    setTheme(initialTheme)
-    applyTheme(initialTheme)
-  }, [])
+    if (savedTheme) return savedTheme
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  })
 
-  function applyTheme(newTheme: 'light' | 'dark') {
-    if (newTheme === 'dark') {
+  useEffect(() => {
+    if (theme === 'dark') {
       document.documentElement.classList.add('dark')
     } else {
       document.documentElement.classList.remove('dark')
     }
-    localStorage.setItem('theme', newTheme)
-  }
+    localStorage.setItem('theme', theme)
+  }, [theme])
 
   function toggleMenu() { setMenuOpen(prev => !prev) }
 
   function toggleTheme() {
     const next = theme === 'light' ? 'dark' : 'light'
     setTheme(next)
-    applyTheme(next)
   }
 
   return (

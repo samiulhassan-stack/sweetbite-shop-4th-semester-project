@@ -2,20 +2,32 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar/page'
 import Footer from '../../components/Footer/page'
+import { imagePath } from '../../assets/imagePath'
+
+type CartItem = {
+  id: number
+  name: string
+  price: number
+  quantity: number
+  img: string
+  category: string
+  size: string
+  customization: string
+}
 
 export default function Cart() {
-  const [cartItems, setCartItems] = useState([
-    { id: 1, name: 'Triple Chocolate Cake', price: 7000.00, quantity: 1, img: '/images/triple.jpg', category: 'Cakes', size: 'Large', customization: 'Extra chocolate' },
-    { id: 2, name: 'Salted Caramel Scoop', price: 4500.50, quantity: 2, img: '/images/salt.jpg', category: 'Ice Cream', size: 'Regular', customization: 'None' },
-    { id: 3, name: 'Classic Tiramisu', price: 4000.00, quantity: 1, img: '/images/tir.jpg', category: 'Desserts', size: 'Medium', customization: 'Extra coffee' },
-    { id: 4, name: 'French Macarons', price: 5500.00, quantity: 1, img: '/images/french.jpg', category: 'Pastries', size: 'Box of 12', customization: 'Mixed flavors' },
+  const [cartItems, setCartItems] = useState<CartItem[]>([
+    { id: 1, name: 'Triple Chocolate Cake', price: 7000.00, quantity: 1, img: imagePath('triple.jpg'), category: 'Cakes', size: 'Large', customization: 'Extra chocolate' },
+    { id: 2, name: 'Salted Caramel Scoop', price: 4500.50, quantity: 2, img: imagePath('salt.jpg'), category: 'Ice Cream', size: 'Regular', customization: 'None' },
+    { id: 3, name: 'Classic Tiramisu', price: 4000.00, quantity: 1, img: imagePath('tir.jpg'), category: 'Desserts', size: 'Medium', customization: 'Extra coffee' },
+    { id: 4, name: 'French Macarons', price: 5500.00, quantity: 1, img: imagePath('french.jpg'), category: 'Pastries', size: 'Box of 12', customization: 'Mixed flavors' },
   ])
 
   const [promoCode, setPromoCode] = useState('')
   const [appliedPromo, setAppliedPromo] = useState<{code: string, discount: number} | null>(null)
   const [deliveryOption, setDeliveryOption] = useState<'standard' | 'express' | 'pickup'>('standard')
   const [showPromoInput, setShowPromoInput] = useState(false)
-  const [savedForLater, setSavedForLater] = useState<any[]>([])
+  const [savedForLater, setSavedForLater] = useState<CartItem[]>([])
 
   const promoCodes = {
     'SWEET10': 10,
@@ -236,7 +248,7 @@ export default function Cart() {
                       name="delivery" 
                       value={key}
                       checked={deliveryOption === key}
-                      onChange={(e) => setDeliveryOption(e.target.value as any)}
+                      onChange={(e) => setDeliveryOption(e.target.value as 'standard' | 'express' | 'pickup')}
                       className="w-4 h-4 text-[#D4AF37] border-[#8D6E63] focus:ring-[#D4AF37]"
                     />
                     <div className="flex-1">

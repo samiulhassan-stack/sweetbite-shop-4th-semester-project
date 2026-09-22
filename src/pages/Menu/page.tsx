@@ -1,21 +1,22 @@
 import { Link } from 'react-router-dom'
 import Navbar from '../../components/Navbar/page'
 import Footer from '../../components/Footer/page'
+import { imagePath } from '../../assets/imagePath'
 
 const cakes = [
-  { img: '/images/triplee.jpg', name: 'Triple Chocolate', desc: 'Dark, milk & white chocolate layered with ganache.',  price: '7000.00' },
-  { img: '/images/redd.jpg',    name: 'Red Velvet',       desc: 'Velvety crumb with cream cheese frosting.',           price: '7500.00' },
-  { img: '/images/van.jpg',     name: 'Vanilla Bean',     desc: 'Light sponge with Madagascar vanilla cream.',         price: '6000.00' },
+  { img: imagePath('triplee.jpg'), name: 'Triple Chocolate', desc: 'Dark, milk & white chocolate layered with ganache.',  price: '7000.00' },
+  { img: imagePath('redd.jpg'),    name: 'Red Velvet',       desc: 'Velvety crumb with cream cheese frosting.',           price: '7500.00' },
+  { img: imagePath('van.jpg'),     name: 'Vanilla Bean',     desc: 'Light sponge with Madagascar vanilla cream.',         price: '6000.00' },
 ]
 const iceCreams = [
-  { img: '/images/salt.jpg',  name: 'Salted Caramel',        desc: 'Slow churned caramel with sea salt.',  price: '1500.50' },
-  { img: '/images/picto.jpg', name: 'Pistachio Royale',      desc: 'Roasted pistachio gelato.',            price: '1800.00' },
-  { img: '/images/staaa.jpg', name: 'Strawberry Cheesecake', desc: 'Strawberry swirl with cream cheese.',  price: '1200.50' },
+  { img: imagePath('salt.jpg'),  name: 'Salted Caramel',        desc: 'Slow churned caramel with sea salt.',  price: '1500.50' },
+  { img: imagePath('picto.jpg'), name: 'Pistachio Royale',      desc: 'Roasted pistachio gelato.',            price: '1800.00' },
+  { img: imagePath('staaa.jpg'), name: 'Strawberry Cheesecake', desc: 'Strawberry swirl with cream cheese.',  price: '1200.50' },
 ]
 const desserts = [
-  { img: '/images/tira.jpg',   name: 'Tiramisu',        desc: 'Espresso soaked layers with mascarpone.', price: '1200.00' },
-  { img: '/images/french.jpg', name: 'French Macarons', desc: 'Box of 12 assorted flavours.',            price: '3500.00' },
-  { img: '/images/chee.jpg',   name: 'NY Cheesecake',   desc: 'Baked cheesecake with berry topping.',    price: '2000.00' },
+  { img: imagePath('tira.jpg'),   name: 'Tiramisu',        desc: 'Espresso soaked layers with mascarpone.', price: '1200.00' },
+  { img: imagePath('french.jpg'), name: 'French Macarons', desc: 'Box of 12 assorted flavours.',            price: '3500.00' },
+  { img: imagePath('chee.jpg'),   name: 'NY Cheesecake',   desc: 'Baked cheesecake with berry topping.',    price: '2000.00' },
 ]
 
 function MenuCard({ img, name, desc, price }: { img: string; name: string; desc: string; price: string }) {
