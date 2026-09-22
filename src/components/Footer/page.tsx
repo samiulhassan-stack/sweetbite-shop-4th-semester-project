@@ -44,6 +44,9 @@ export default function Footer() {
       <p className="text-center mt-5 pt-3.5 border-t border-[#5D4037] text-[#D7B98E] text-[13px] dark:border-[#4a4a4a]">
         © 2026 SweetBite Shop. All rights reserved.
       </p>
+      <p className="text-center mt-2 text-[#D4AF37] text-[13px] font-medium tracking-wide">
+        Designed by Sami Ul Hassan <span className="text-[#D7B98E]">· UOG Student</span>
+      </p>
     </footer>
   )
 }
