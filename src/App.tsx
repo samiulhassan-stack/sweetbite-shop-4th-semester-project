@@ -23,7 +23,7 @@ function Home() {
 
         {/* HERO */}
         <section className="flex flex-col items-center text-center px-5 py-20 bg-gradient-to-br from-[#3E2723] to-[#5D4037] rounded-[10px] mb-8 dark:from-[#2a1810] dark:to-[#3d2b1f]">
-          <h1 className="text-[52px] font-bold text-[#D4AF37] mb-3 tracking-wide">Welcome to SweetBite</h1>
+          <h1 className="text-[52px] font-bold text-[#D4AF37] mb-3 tracking-wide">Welcome to SweetBite 🍰</h1>
           <h3 className="text-[22px] font-bold text-[#D4AF37] mb-2">Handcrafted Cakes · Artisan Ice Creams · Heavenly Desserts</h3>
           <p className="text-[#D4AF37] text-[15px] max-w-[620px] mb-5">
             Every bite is a little moment of joy. Made fresh daily with the finest cocoa,
